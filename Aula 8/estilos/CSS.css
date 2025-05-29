@@ -1,0 +1,368 @@
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'Braah One', cursive;
+    text-align: center;
+    color: dimgray;
+}
+header {
+    top: 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;  
+    color: white;
+    background-color: rgba(95, 158, 160, 40%);
+    backdrop-filter: blur(5px); 
+    padding-top: 7px;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+.menu { 
+    width: 25%; 
+    float: left;
+    margin-left: 7px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: darkslategray;
+    font-size: 1rem;
+}
+.menu a {
+    display: none;
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    border-top: 1px dotted gray;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    transition: background-color 1s;
+}
+.menu:hover a {
+    display: block;
+}
+.meno a:hover {
+    background-color: gray;
+}
+h1 {
+    display: inline;
+    text-shadow: 4px 4px 10px darkslategray;
+    font-size: 1.5rem;
+}
+main {
+    padding-top: 50px;
+}
+#al, #cp {
+    padding-top: 60px;
+    margin: 10px auto;
+}
+h2 {
+    color: darkslategray;
+    font-size: 2rem;
+}
+.container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin: 30px auto;
+    padding-bottom: 400px;
+}
+.mini {
+    width: 20%;
+    border-radius: 5%;
+}
+.polaroid {
+    width: 55vw;
+    height: 40vw;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 40%);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.foto {
+    width: 100%;
+    height: 30vw;
+    background-image: url(../imagens/base.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.descr {
+    width: 100%;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+}
+#ba:hover ~ .polaroid .foto {
+    background-image: url("../imagens/local1.jpg");
+}
+#rj:hover ~ .polaroid .foto {
+    background-image: url("../imagens/local2.jpg");
+}
+#pr:hover ~ .polaroid .foto {
+    background-image: url("../imagens/local3.jpg");
+}
+#ba:hover ~ .polaroid .descr::before {
+    content: "Salvador/BA";
+}
+#rj:hover ~ .polaroid .descr::before {
+    content: "Rio de Janeiro/RJ";
+}
+#pr:hover ~ .polaroid .descr::before{
+    content: "Foz do Iguaçu/PR";
+}
+.efeito {
+    position: relative;
+    width: 70%;
+    margin: 30px;
+}
+.retrato {
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 40%);
+    transition: all 1s;
+}
+.camada {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transition: all 1s;
+}
+.texto {
+    background-color: darkslategray;
+    color: white;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 2.5vw;
+}
+.efeito:hover .retrato {
+    opacity: 30%;
+}
+.efeito:hover .camada {
+    opacity: 100%;
+}
+.geral {
+    width: 100%;
+    margin: auto;
+    column-count: 3;
+    column-rule: 2px solid darkslategray;
+    padding-bottom: 400px;
+}
+.borda {
+    position: relative;
+    column-span: all;
+    width: 70vw;
+    height: 42vw;
+    margin: 50px auto;
+    border: 5px dashed dimgray;
+    border-radius: 10px;
+}
+.esq {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    width: 50%;
+    margin: 10px auto;
+    border-right: 2px solid gray;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+.dir {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.img_local {
+    width: 25vw;
+    height: 15vw;
+    border-radius: 10px;
+    margin: auto;
+    padding-top: 5px;
+    background-size: cover;
+    background-position: center;
+}
+.local {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 2.5vw;
+}
+table {
+    width: 80%;
+    margin: 3vw auto;
+}
+th {
+    width: 90%;
+    height: 1.5vw;
+    border-bottom: 2px solid gray;
+}
+#loc1:checked ~ .borda .esq .img_local {
+    background-image: url("../imagens/local1.jpg");
+}
+#loc2:checked ~ .borda .esq .img_local {
+    background-image: url("../imagens/local2.jpg");
+}
+#loc3:checked ~ .borda .esq .img_local {
+    background-image: url("../imagens/local3.jpg");
+}
+#loc1:checked ~ .borda .esq .local::after {
+    content: "Salvador/BA";
+}
+#loc2:checked ~ .borda .esq .local::after {
+    content: "Rio de Janeiro/RJ";
+}
+#loc3:checked ~ .borda .esq .local::after {
+    content: "Foz do Iguaçu/PR";
+}
+.selo {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 10vw;
+    height: 10vw;
+    margin: 10px 20px;
+    background-size: cover;
+    background-position: center;
+}
+#selo1:checked ~ .borda .dir .selo {
+    background-image: url("../imagens/selo1.png");
+}
+#selo2:checked ~ .borda .dir .selo {
+    background-image: url("../imagens/selo2.png");
+}
+#selo3:checked ~ .borda .dir .selo {
+    background-image: url("../imagens/selo3.png");
+}
+.carimbo {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 20vw;
+    height: 12vw;
+    margin: 10px 5px;
+    background-size: cover;
+    background-position: right;
+    z-index: 1;
+}
+#car1:checked ~ .borda .dir .carimbo{
+    background-image: url("../imagens/carimbo1.png");
+}
+#car2:checked ~ .borda .dir .carimbo{
+    background-image: url("../imagens/carimbo2.png");
+}
+#car3:checked ~ .borda .dir .carimbo{
+    background-image: url("../imagens/carimbo3.png");
+}
+.dir table {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 10vw;
+}
+.cep {
+    position: absolute;
+    right: 4vw;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.ret {
+    margin: 0.1vw;
+    height: 2vw;
+    padding: 0.75vw;
+    border: 2px gray;
+}
+
+@media (min-width: 768px) { 
+    .menu a {
+        font-size: 1rem;
+    }
+    .menu { 
+        width: 20%;   
+        font-size: 1.25rem;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    .container {
+        width: 50%;
+    }
+    .mini {
+        width: 15%;
+    }
+    .polaroid {
+        width: 33vw;
+        height: 26vw;
+    }
+    .foto {
+        height: 20vw;
+    }
+    .descr {
+        height: 5vw;
+        font-size: 2vw;
+    }
+    #al ~ .container {
+        width: 80%;
+    }
+    .efeito {
+        width: 30%;
+        margin: 0x;
+    }
+    .texto {
+        font-size: 1vw;
+    }
+    .geral {
+        width: 60vw;
+    }
+    .borda {
+        width: 50vw;
+        height: 30vw;
+        margin: 20px auto;
+        border-width: 8px;
+        border-radius: 20px;
+    }
+    .esq {
+        padding: 2vw 0;
+    }
+    .img_local {
+        width: 18vw;
+        height: 10vw;
+    }
+    .local {
+        font-size: 2vw;
+    }
+    table {
+        margin: 2vw auto;
+    }
+    th {
+        height: 1.75vw;
+    }
+    .selo {
+        margin: 20px 2vw;
+    }
+    .carimbo {
+        width: 15vw;
+        height: 10vw;
+        margin: 20px 2vw;
+    }
+    .dir table {
+        bottom: 5vw;
+    }
+    .cep {
+        bottom: 2.5vw;
+    }
+    .ret {
+        height: 1px; 
+    }    
+}
