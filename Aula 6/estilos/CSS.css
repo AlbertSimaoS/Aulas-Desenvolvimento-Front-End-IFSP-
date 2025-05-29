@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: mintcream;
+    color: darkgreen;
+    font-family: 'Share Tech', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    height: 12rem;
+    position: fixed;
+    background:  linear-gradient(to bottom, rgb(79, 131, 131), rgb(128, 181, 181),
+    rgb(226, 247, 247)); 
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+h1{
+    font-size: 2rem;
+    color: ivory;
+    text-shadow: 2px 2px slategray;
+}
+
+#botao_menu{
+    width: 20px;
+}
+
+.menu ul{
+        list-style-type: none;
+}
+
+.menu li{
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: dimgray;
+    font-size: 1.25rem;
+    display: block;
+}
+
+.ativo{
+    background-color: mintcream;
+    border-radius: 10px;
+}
+
+main{
+    position: absolute;
+    top: 12rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+h3{
+    color: darkcyan;
+    font-size: 1.25rem;
+}
+
+img{
+    width: 100%;
+}
+
+#foto_home{
+    width: 50%;
+    padding: 2rem;
+}
+
+table{
+    width: 95%;
+    margin: 1rem auto;
+    border:  2px dotted darkcyan;
+    border-radius: 10px;
+}
+
+th, td{
+    border:  2px dotted darkcyan;
+    border-radius: 10px;
+    padding: 0.25rem;
+}
+
+th{
+    color: dimgray;
+    background-color: rgba(47, 79, 79, 0.20);
+    font-size: 1.25rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(105, 105, 105, 0.20);
+    border-radius: 10px;
+    width: 95%;
+    margin: 1rem auto;
+    box-sizing: border-box;
+}
+
+.foto_ferram{
+    width: 40%;
+    margin: 20px auto;
+}
+
+.texto_ferram{
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+h2{
+    color: mintcream;
+    text-shadow: 2px 2px darkgreen;
+}
+
+.texto_ferram li{
+    padding: 5px;
+    color:  darkslategray;
+}
+
+.texto_ferram ul{
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.galeria .container{
+    padding: 10px;
+    background-image: url("../imagens/fundo_verde.png");
+}
+
+.galeria .container img{
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+}
+
+@media (min-width: 768px) {
+    header{
+        padding-bottom: 30px;
+        height: 6rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    #botao_menu{
+        display: none;
+    }
+
+    .menu ul{
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li{
+        width: 25%;
+        float: left;
+        margin: 0px 5px;
+    }
+
+    .menu li:hover{
+        background-color: rgba(245, 255, 250, 0.30);
+        border-radius: 10px;
+    }
+
+    main{
+        top: 6rem;
+    }
+
+    #foto_home{
+        width: 20%;
+    }
+
+    table{
+        width: 20%;
+    }
+
+    th, td{
+        padding: 1rem;
+    }
+
+    .container{
+        flex-wrap: nowrap;
+        margin: 1.5rem auto;
+    }
+
+    .foto_ferram{
+        padding: 15px;
+        width: 10%;
+        margin: 5px auto;
+    }
+
+    .texto_ferram{
+        font-size: 1.1rem;
+        padding: 15px;
+        width: 80%;
+    }
+
+    .texto_ferram ul{
+        padding: 5px;
+    }
+
+    .galeria .container{
+       flex-wrap: wrap; 
+    }
+
+    .galeria .container img{
+        width: 20%;
+        filter:  grayscale(80%);
+    }
+
+    .galeria img:hover{
+        filter: none
+    }
+}
