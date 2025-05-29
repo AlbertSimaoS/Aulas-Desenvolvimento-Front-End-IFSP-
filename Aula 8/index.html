@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos/css.css">
+    <link rel="icon" href="imagens/viagem.png">
+    <link href="https://fonts.googleapis.com/css2?family=Braah+One&display=swap" rel="stylesheet">
+    <title>Viagens</title>
+</head>
+<body>
+    <header>
+        <div class="menu">Menu
+            <a href="#top">Polaroid</a>
+            <a href="#al">Álbum</a>
+            <a href="#cp">Cartão Postal</a>
+        </div>
+        <h1>Viagens</h1>
+    </header>
+    <main>
+        <h2>Polaroid</h2>
+        <div class="container"> 
+            <img src="imagens/local1.jpg" alt="Salvador/BA" class="mini" id="ba">
+            <img src="imagens/local2.jpg" alt="Rio de Janeiro/RJ" class="mini" id="rj">
+            <img src="imagens/local3.jpg" alt="Foz do Iguaçu/PR" class="mini" id="pr">
+
+            <div class="polaroid">
+                <div class="foto"></div>
+                <div class="descr"></div>
+            </div>
+        </div>
+
+        
+        <h2 id="al">Álbum</h2>
+        <div class="container">
+            <div class="efeito">
+                <img src="imagens/local1.jpg" alt="Salvador/BA" class="retrato">
+                <div class="camada">
+                    <div class="texto">Salvador/BA</div>
+                </div>
+            </div>
+            <div class="efeito">
+                <img src="imagens/local2.jpg" alt="Rio de Janeiro/RJ" class="retrato">
+                <div class="camada">
+                    <div class="texto">Rio de Janeiro/RJ</div>
+                </div>
+            </div>
+            <div class="efeito">
+                <img src="imagens/local3.jpg" alt="Foz do Iguaçu/PR" class="retrato">
+                <div class="camada">
+                    <div class="texto">Foz do Iguaçu/PR</div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2 id="cp">Cartão Postal</h2>
+        <div class="geral">
+            <input type="radio" id="loc1" name="local"> Local 1  <br>
+            <input type="radio" id="loc2" name="local"> Local 2  <br>
+            <input type="radio" id="loc3" name="local"> Local 3  <br>
+            <input type="radio" id="car1" name="carim"> Carimbo 1  <br>
+            <input type="radio" id="car2" name="carim"> Carimbo 2  <br>
+            <input type="radio" id="car3" name="carim"> Carimbo 3  <br>
+            <input type="radio" id="selo1" name="selo"> Selo 1  <br>
+            <input type="radio" id="selo2" name="selo"> Selo 2  <br>
+            <input type="radio" id="selo3" name="selo"> Selo 3  <br>
+            <div class="borda">           
+                <div class="esq">
+                    <div class="img_local"></div>
+                    <div class="local"></div>                  
+                    <table>
+                        <tr><th></th></tr>
+                        <tr><th></th></tr>
+                        <tr><th></th></tr>
+                    </table>
+                </div>
+                <div class="dir">
+                    <div class="carimbo"></div>
+                    <div class="selo"></div>                 
+                    <table>
+                        <tr><th></th></tr>
+                        <tr><th></th></tr>
+                        <tr><th></th></tr>
+                    </table>
+                    <div class="cep">
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                        -
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                        <div class="ret"></div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </main>
+</body>
+</html>
